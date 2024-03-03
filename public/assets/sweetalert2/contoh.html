@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sweet Alert</title>
+	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container text-center mt-4">
+	<button type="button" class="btn btn-primary" onclick="alert('selamat datang')">
+	Silahkan KLIK</button>
+	<button type="button" class="btn btn-info text-white" onclick="Swal.fire('Selamat Datang')">
+	Silahkan KLIK</button>
+	<button type="button" class="btn btn-warning text-white" id="tekan">
+	Silahkan KLIK</button>
+	<button type="button" class="btn btn-danger" id="tombol">
+	Silahkan KLIK</button>
+	
+
+</div>
+<br>
+<div class="container text-center mt-5">
+	<button type="button" class="btn btn-danger" id="tombol2">
+	Silahkan KLIK</button>
+	<button type="button" class="btn btn-primary" id="tombol3">
+	Silahkan KLIK</button>
+</div>
+
+
+	
+
+
+	<script src="dist/sweetalert2.all.min.js"></script>
+	<script type="text/JavaScript" src="../js/jquery-3.4.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script>
+		const btn = document.getElementById('tekan');
+		btn.addEventListener('click', function(){
+			Swal.fire({
+				title:'Berhasil',
+				text:'Data berhasil di simpan',
+				icon:'success'
+			})
+		});	
+
+	</script>
+	<script>
+		const btn2 = document.getElementById('tombol');
+		btn2.addEventListener('click', function(){
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, delete it!'
+				}).then((result) => {
+				if (result.isConfirmed) {
+				Swal.fire(
+				'Deleted!',
+				'Your file has been deleted.',
+				'success'
+				)
+				}
+			})
+		});	
+
+	</script>
+
+	<script>
+		const btn3 = document.getElementById('tombol2');
+		btn3.addEventListener('click', function(){
+			Swal.fire({
+				title: 'Custom width, padding, color, background.',
+				width: 600,
+				padding: '3em',
+				color: '#fff',
+				background: '#060c21',
+				
+				
+				 
+			})
+		});	
+
+	</script>
+	<script>
+		const btn4 = document.getElementById('tombol3');
+		btn4.addEventListener('click', function(){
+			Swal.fire({
+				 title: 'Sweet!',
+				  text: 'Modal with a custom image.',
+				  imageUrl: 'kawai.gif',
+				  imageWidth: 400,
+				  imageHeight: 200,
+				  imageAlt: 'Custom image',
+				  timer: 4000,
+				  showConfirmButton: false,
+				 
+			})
+		});	
+
+	</script>
+</body>
+</html>

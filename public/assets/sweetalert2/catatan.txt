@@ -1,0 +1,9 @@
+html {
+  /* font-size: 10px; */
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+saat menggunakan sweetalert kemudian tampilannya kecil
+maka yang bermasalah di css/bootstrap.css 
+bagian tag html fontsize
